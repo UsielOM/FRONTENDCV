@@ -165,7 +165,7 @@ export class RegisterVitalsingsComponent implements OnInit {
   ngOnInit(): void {
 
     this.route.params.subscribe(params=>{
-      const id: string = params.id;
+      const id: string = params ["id"];
       if(id !== "new"){
         this.vitalsig = new Vitalsignos();
         this.isNew= true;

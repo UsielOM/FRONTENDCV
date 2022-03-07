@@ -7,9 +7,9 @@ export function ConfirmedValidator(controlName: string, matchingControlName: str
     const control = formGroup.controls[controlName];
     const matchingControl = formGroup.controls[matchingControlName];
 
-    if (matchingControl.errors && !matchingControl.errors.confirmedValidator) {
-      return;
-    }
+    // if (matchingControl.errors && !matchingControl.errors.confirmedValidator) {
+    //   return;
+    // }
 
     if (control.value !== matchingControl.value) {
       matchingControl.setErrors({ confirmedValidator: true });

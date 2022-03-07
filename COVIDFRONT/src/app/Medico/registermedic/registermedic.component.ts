@@ -16,6 +16,7 @@ export class RegistermedicComponent implements OnInit {
   saved = false;
   regexito = "";
   isNew= false;
+  
 
   constructor(private fb: FormBuilder,
               private registermedicservice: RegistermedicService,
@@ -24,7 +25,7 @@ export class RegistermedicComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params=>{
-      const id: string = params.id;
+      const id: string = params ["id"];
       if(id !== "new"){
         this.userm = new Medics();
         this.isNew= true;
