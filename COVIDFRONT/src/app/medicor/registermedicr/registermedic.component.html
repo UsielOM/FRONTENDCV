@@ -1,0 +1,92 @@
+<div>
+  <h1 style="text-align: center; font-family: 'Berlin Sans FB'" > Registro </h1>
+  <div class="contenedorp">
+    <form class="row g-3 needs-validation" novalidate >
+      <div class="form-group">
+
+        <div class="row">
+          <div class="col">
+            <input type="text" name="nombre" id="name" class="form-control" placeholder="Nombre" required autofocus>
+          </div>
+          <div class="col">
+            <input type="text" name="apaterno" class="form-control"  placeholder="Apellido Paterno"  required>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="amaterno" placeholder="Apellido Materno" aria-label="Apellido Materno" required>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" name="curp" aria-describedby="emailHelp" placeholder="Curp" required>
+          </div>
+          <div class="col">
+            <label for="fechanaci"> Fecha de Nacimiento : </label>
+            <input type="date" id="fechanaci"  min="1950-01-01" max="2100-12-31">
+          </div>
+        </div>
+
+        <div class="form-check">
+
+          <label for="gen">Sexo</label>
+          <fieldset>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">Femenino</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Masculino</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+        <label for="correo">Ingresa tu Correo</label>
+        <input type="email" class="form-control" name="correo" placeholder="ingresa correo" required>
+        <small id="emailHelp" class="form-text text-muted">No compartiremos tu correo con nadie</small>
+
+
+        <div class="row">
+          <div class="col">
+            <label for="contrasena">Ingresa tu Contraseña</label>
+            <input type="password" class="form-control" name="contrasena" placeholder="Password" required>
+          </div>
+          <div class="col">
+            <label for="confcontrasena">Confirma tu contraseña</label>
+            <input type="password" name="confcontrasena" class="form-control" id="confcontrasena" placeholder="Password" required>
+          </div>
+        </div>
+
+
+        <div style="padding-top: 2%">
+          <div class="row">
+            <label>Informacion importante sobre el Medico</label>
+            <div class="col">
+              <input type="text" class="form-control" id="especialidad" placeholder="Especialidad" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="Hospital" placeholder="Hospital" required>
+            </div>
+            <div class="col">
+              <input type="text"  class="form-control" id="Cedulaprofecional" placeholder="Cadula profecional" required>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" id="consultorio" placeholder="Consultorio" required>
+          </div>
+        </div>
+        <br>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

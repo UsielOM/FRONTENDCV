@@ -1,0 +1,157 @@
+<div xmlns="http://www.w3.org/1999/html">
+
+  <div class="contenedorp">
+    <h1 style="text-align: center; font-family: 'Berlin Sans FB'" > Historial Clinico del Paciente </h1>
+    <form onSubmit="return validar();">
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <p>Nombre Completo: </p>
+        </div>
+        <div class="col">
+          <p>NOMBRE APELLIDO PATERNO APELLIDO MATERNO</p>
+        </div>
+      </div>
+
+      <div class="row g-3 align-items-center" style="padding-top: 10px">
+        <div class="col-auto">
+          <label for="edad" class="col-form-label">Edad: </label>
+        </div>
+        <div class="col" >
+          <input style="width: 100px" type="text" id="edad" class="form-control" placeholder="" required autofocus>
+        </div>
+      </div>
+
+      <div class="row g-3 align-items-center" style="padding-top: 10px">
+        <div class="col-auto">
+          <label for="Peso" class="col-form-label">Peso: </label>
+        </div>
+        <div class="col-auto" >
+          <input style="width: 100px" type="text" id="Peso" class="form-control" placeholder="00 kg" required autofocus>
+        </div>
+        <div class="col-3" >
+          <label>Kilos (Kg)</label>
+        </div>
+      </div>
+
+      <div class="row g-3" style="padding-top: 10px">
+        <label for="medtom" class="col-form-label">Indique SI tiene alguna Enfermedad Cronicas</label>
+
+        <div class="col-auto">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Diabetes
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Hipertencion
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Cardiovascular
+            </label>
+          </div>
+
+        </div>
+
+        <div class="col-auto">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Sobrepeso
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Asma
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Ninguna
+            </label>
+          </div>
+        </div>
+
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="otraenfe" class="col-form-label">Otra: </label>
+          </div>
+          <div class="col" >
+            <input type="text" id="otraenfe" class="form-control" placeholder="Escriba cual(es) son:" required autofocus>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row g-3 align-items-center" style="padding-top: 10px">
+        <label for="medtom" class="col-form-label">Medicamentos que toma ante el padecimiento, o que ha tomado anteriormente: </label>
+        <textarea class="form-control" placeholder="Escriba cuales o deje vacio" id="medtom" style="height: 100px"></textarea>
+      </div>
+
+      <div class="row g-2 align-items-center" style="padding-top: 10px">
+        <label for="alergias" class="col-form-label">Si tiene Alergias indique cuales son:</label>
+        <textarea class="form-control" placeholder="Escriba cuales o deje vacio" id="alergias" style="height: 100px"></textarea>
+      </div>
+
+      <div class="col" style="padding-top: 20px">
+        <button type="button" id="enviarhsi" class="btn btn-primary">Enviar los datos</button>
+      </div>
+
+
+      <div class="row g-3 align-items-center" style="padding-top: 10px">
+        <div class="col">
+          <label class="col-form-label">Diagnostico Clinico</label>
+        </div>
+        <div class="col">
+          <button type="button" id="agrcli" class="btn btn-primary">Agregar</button>
+        </div>
+        <div class="col">
+          <button type="button" id="verdiag" class="btn btn-primary">Ver Diagnostico</button>
+        </div>
+      </div>
+
+      <div class="row g-2 align-items-center" style="padding-top: 10px">
+        <div class="col-auto">
+          <label for="diagla" class="col-form-label">Indique el laboratorio donse se hizo el estudio</label>
+        </div>
+        <div class="col">
+          <input type="text" id="diagla" class="form-control" placeholder="Laboratorio">
+        </div>
+      </div>
+ <!-- OTRO FROM enctype="multipart/form-data"-->
+      <div class="row g-3 align-items-center" style="padding-top: 10px">
+        <div class="col">
+          <label class="col-form-label">Foto de la Lengua</label>
+        </div>
+        <div class="col">
+          <button type="file" id="agrefole" class="btn btn-primary">Agregar</button>
+        </div>
+        <div class="col">
+          <button type="button" id="verlen" class="btn btn-primary">Ver</button>
+        </div>
+      </div>
+
+      <div class="row g-3 align-items-center" style="padding-top: 10px">
+        <div class="col-auto">
+          <label for="nop" class="col-form-label">Lecturas del paciente</label>
+        </div>
+        <div class="col-auto">
+          <a class="btn btn-primary" href="#" role="button">Ver</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+

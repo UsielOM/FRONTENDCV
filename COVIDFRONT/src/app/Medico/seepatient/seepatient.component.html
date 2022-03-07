@@ -1,0 +1,76 @@
+<div class="contenedorp">
+
+
+
+  <h2 style="text-align: center">Lista de Pacientes</h2>
+
+  <div class="row g-3 align-items-center" style="padding-top: 10px;padding-bottom: 10px">
+    <div class="col-auto">
+      <label for="buscarpaciente" class="col-form-label">Buscar paciente</label>
+    </div>
+    <div class="col">
+      <input type="text" id="buscarpaciente" class="form-control">
+    </div>
+    <div class="col">
+      <button type="submit" id="buscarpacienteb" class="btn btn-primary">Buscar</button>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="table table-primary table-hover" style="width: 100%;text-align: center">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">NOMBRE(S)</th>
+        <th scope="col">APELLIDO PATERNO</th>
+        <th scope="col">APELLIDO MATERNO</th>
+        <th scope="col">CURP</th>
+        <th scope="col">FECHA DE NACIMIENTO</th>
+        <th scope="col">PAGO</th>
+        <th scope="col">ESTATUS</th>
+        <th scope="col">HISTORIAL</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>algien</td>
+        <td>algien</td>
+        <td>algien</td>
+        <td>sadre12314hgfjh54</td>
+        <td>00/00/0000</td>
+        <td>No pagado</td>
+        <td>ACTIVO</td>
+        <td><button type="button" class="btn btn-primary" ref="">Ver</button></td>
+      </tr>
+      <!--
+      <tr *ngFor="let user of USERS">
+        <th>{{user.nup}}</th>
+        <td>{{user.nombre}}</td>
+        <td>{{user.apellidop}}</td>
+        <td>{{user.apellidom}}</td>
+        <td>{{user.curp}}</td>
+        <td>{{user.fnaciemento}}</td>
+        <td>{{user.pago}}</td>
+        <td>{{user.estatus}}</td>
+        <td><button type="button" class="btn btn-primary" id="{{user.id}}">Ver</button></td>
+      </tr>
+      -->
+
+      <tr *ngFor="let pacientes of pacientes">
+        <th>{{pacientes.Nombre}}</th>
+        <td>{{pacientes.Apellido_paterno}}</td>
+        <td>{{pacientes.Apellido_materno}}</td>
+        <td>{{pacientes.CURP}}</td>
+        <td>{{pacientes.Fecha_nacimiento}}</td>
+        <td>{{pacientes.Sexo}}</td>
+        <td>{{pacientes.Email}}</td>
+        <td>{{pacientes.tipeu}}</td>
+        <td><button type="button" class="btn btn-primary" id="{{pacientes.id}}">Ver</button></td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</div>

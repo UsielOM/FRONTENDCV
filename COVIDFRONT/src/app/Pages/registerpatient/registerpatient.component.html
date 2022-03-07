@@ -1,0 +1,91 @@
+<div>
+    <h1 style="text-align: center; font-family: 'Berlin Sans FB'"> Registro </h1>
+    <div class="contenedorp">
+        <form class="row g-3 needs-validation" novalidate [formGroup]="formregpatien" (ngSubmit)="recuperadatosp()">
+          <!-- Nombre completo -->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-4">
+                      <input type="text" [required]="true" [(ngModel)]="user.Nombre" class="form-control" formControlName="nombre" placeholder="Nombre" required autofocus />
+                      <span *ngIf="nombre && nombre.invalid && nombre.touched"  style="color: red"  >El campo debe ser rellenado</span>
+                      <br>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" [(ngModel)]="user.Apellido_paterno" class="form-control" formControlName="apaterno" id="apaterno" placeholder="ApellidoPaterno" required>
+                      <span *ngIf="apaterno && apaterno.invalid && apaterno.touched"  style="color: red"  >El campo debe ser rellenado</span>
+                      <br>
+                    </div>
+                    <div class="col">
+                        <input type="text" [(ngModel)]="user.Apellido_materno" class="form-control" formControlName="amaterno" id="amaterno" placeholder="ApellidoMaterno" aria-label="Apellido Materno" required>
+                      <span *ngIf="amaterno && amaterno.invalid && amaterno.touched"  style="color: red"  >El campo debe ser rellenado</span>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+          <!-- curp y nacimeito -->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" [(ngModel)]="user.CURP" formControlName="curp" id="curp" aria-describedby="emailHelp" placeholder="Curp" required>
+                      <span *ngIf="curp && curp.errors?.['minlength']"  style="color: red"  >El campo debe ser contener minimo 18 caracteres</span>
+                    </div>
+                    <div class="col">
+                        <label for="fechanaci"> Fecha de Nacimiento :</label>
+                        <input type="date" id="fechanaci" formControlName="fechanaci" [(ngModel)]="user.Fecha_nacimiento" name="trip-start" placeholder="date" value="" min="1950-01-01" max="2100-12-31">
+                      <span *ngIf="fechanaci && fechanaci.invalid && fechanaci.touched"  style="color: red"  >El campo debe ser rellenado</span>
+                    </div>
+                </div>
+            </div>
+
+          <!-- genero -->
+            <div class="form-grup">
+                <div class="col">
+                    <label for="gen">Genero</label>
+                    <fieldset>
+
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" [(ngModel)]="user.Sexo" id="Femenino" name="gen" formControlName="genero" value="Femenino">
+                        <label class="form-check-label" for="Femenino">Femenino</label>
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" [(ngModel)]="user.Sexo" id="Masculino" name="gen" formControlName="genero" value="Masculino">
+                        <label class="form-check-label" for="Masculino">Masculino</label>
+                      </div>
+
+                    </fieldset>
+                </div>
+            </div>
+          <!-- correo y contra -->
+            <div class="form-group">
+                <label for="correo">Ingresa tu Correo</label>
+                <input type="email" class="form-control" [(ngModel)]="user.Email" formControlName="correo" id="correo" placeholder="ingresa correo" required>
+              <span *ngIf="correo && correo.invalid && correo.touched"  style="color: red"  >El campo debe ser rellenado</span>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="contrasena">Ingresa tu Contraseña</label>
+                        <input type="password" class="form-control" [(ngModel)]="user.password" formControlName="contrasena" placeholder="Password" required>
+                      <span *ngIf="contrasena && contrasena.invalid && contrasena.touched"  style="color: red"  >El campo es requerido</span>
+                    </div>
+                    <div class="col">
+                        <label for="confcontrasena">Confirma tu contraseña</label>
+                        <input type="password" name="confcontrasena" class="form-control" formControlName="confcontrasena"  id="confcontrasena" placeholder="Password" required>
+                      <span *ngIf="confcontrasena && confcontrasena.errors?.['required'] && confcontrasena.touched"  style="color: red"  >El campo es requerido</span>
+                      <span *ngIf="confcontrasena && confcontrasena.errors?.confirmedValidator"  style="color: red">Las contraseñas no son iguales</span>
+
+                    </div>
+                </div>
+            </div>
+          <!-- .... -->
+            <br>
+            <div class="form-group">
+                <button (click)="createUser()" id="btnSubmit" class="btn btn-primary" [disabled]="!formregpatien.valid">Confirmar porfa</button>
+            </div>
+        </form>
+      <span style="color: darkblue;">{{regexito}} </span>
+    </div>
+</div>

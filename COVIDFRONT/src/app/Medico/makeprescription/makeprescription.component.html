@@ -1,0 +1,30 @@
+<div class="contenedorp">
+  <!-- busqueda de paciente -->
+  <div id="pdfTable" #pdfTable>
+    <div class="row g-3 align-items-center" style="padding-top: 10px">
+      <div class="col-auto">
+        <label for="buscarpaciente" class="col-form-label">Buscar paciente</label>
+      </div>
+      <div class="col">
+        <input type="text" id="buscarpaciente" class="form-control">
+      </div>
+      <div class="col">
+        <button type="button" id="buscarpacientebot" class="btn btn-primary">Buscar</button>
+      </div>
+    </div>
+    <!-- selector -->
+    <br>
+    <p>NOMBRE APELLDIODELPACIENTE</p>
+
+    <div class="row g-3 align-items-center" style="padding-top: 10px">
+      <div class="col-auto">
+        <label for="medtom" class="col-form-label">Medicamentos a recetar</label>
+      </div>
+      <textarea class="form-control" placeholder="..." id="medtom" style="height: 200px"></textarea>
+    </div>
+
+    <div class="col" style="padding-top: 20px">
+      <button type="button" (click)="downloadAsPDF();" class="btn btn-primary">Recetar</button>
+    </div>
+  </div>
+</div>

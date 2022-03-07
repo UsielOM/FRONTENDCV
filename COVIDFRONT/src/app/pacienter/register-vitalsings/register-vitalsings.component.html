@@ -1,0 +1,73 @@
+<div class="contenedorp">
+
+<h1 style="text-align: center;height: auto; padding-top: 5%; font-family: 'Berlin Sans FB'" > Lectura de Signos Vitales </h1>
+<div style="width: auto ;  margin: 0 auto">
+  <form onSubmit="subirsignosv">
+    <div class="row g-1 align-items-center">
+      <div class="col-auto">
+        <label for="nop" class="col-form-label">Nombre: </label>
+        <p>alguien aagsjdhasg asjhgdjahs</p>
+      </div >
+      <!-- --------------------Reloj ------------ -->
+      <!-- source: https://codesandbox.io/s/angular-clock-forked-3czyl?file=/src/app/clock.component.css:0-30 -->
+      <div class="reloj">
+        <span>Hora Actual: </span>
+        <span class="hour">{{ hours }}:</span>
+        <span class="min">{{ minutes }}:</span>
+        <span class="second">{{ seconds }}</span>
+      </div>
+
+      <!-- --------------------Reloj ------------ -->
+
+    </div>
+
+    <div class="form-group">
+      <div style="width: 70%;padding-top: 20px; float: left" >
+
+        <P>rangos normales</P>
+        <img style="padding-bottom: 10px" src="assets/imgejem.png">
+
+        <div class="row">
+          <div class="col-auto">
+            <label for="temp" class="col-form-label">Temperatura</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="temp" placeholder="00°">
+          </div>
+        </div>
+
+        <div class="row" style="padding-top: 10px">
+          <div class="col-auto">
+            <label for="Frecuncar" class="col-form-label">Frecuencia cardicaca</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="Frecuncar" placeholder="00l/s">
+          </div>
+        </div>
+
+        <div class="row" style="padding-top: 10px" *>
+          <div class="col-auto">
+            <label for="Oxigeno" class="col-form-label">Oxigenacion</label>
+          </div>
+          <div class="col-auto">
+            <input type="text" class="form-control" id="Oxigeno" placeholder="00">
+          </div>
+        </div>
+
+        <div class="form-group" style="padding-top: 20px">
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+        </div>
+
+        <div class="form-group" style="padding-top: 20px">
+          <button type="button" class="btn btn-primary">Leer</button>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </form>
+</div>
+</div>
+
