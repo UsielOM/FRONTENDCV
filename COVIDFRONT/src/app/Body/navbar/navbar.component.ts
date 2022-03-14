@@ -7,12 +7,15 @@ import {CambiatiponavService} from "../../cambiatiponav.service";
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
+
+
 export class NavbarComponent implements OnInit {
 
-  public tipousuario: number = 0;
+  public data: number = 2;
   public mostarp: boolean = false;
-  public mostard: boolean = true;
-  public mostarg: boolean = false;
+  public mostard: boolean = false;
+  public mostarg: boolean = true;
 
 
   constructor(private ctipousuario: CambiatiponavService) {
@@ -26,20 +29,20 @@ export class NavbarComponent implements OnInit {
         this.mostarg=false;
         this.mostarp=true;
         this.mostard=false;
-        console.log(this.tipousuario);
+        console.log(this.data);
 
       }
       else if(data == 2) {
         this.mostarg=false;
         this.mostarp=false;
-        this.mostard=true;
-        console.log(this.tipousuario);
+        this.mostard=false;
+        console.log(this.data);
       }
       else{
         this.mostarg = true;
         this.mostarp = false;
         this.mostard = false;
-        console.log(this.tipousuario);
+        console.log(this.data);
       }
 
       console.log('pa',this.mostarp);
@@ -80,3 +83,5 @@ export class NavbarComponent implements OnInit {
 
 
 }
+
+

@@ -3,6 +3,8 @@ import { LGM } from '../../lg';
 import { AuthService } from '../../auth.service';
 import {Router} from '@angular/router'
 import {CambiatiponavService} from "../../cambiatiponav.service";
+import { NavbarComponent } from '../../Body/navbar/navbar.component';
+
 
 
 @Component({
@@ -10,7 +12,11 @@ import {CambiatiponavService} from "../../cambiatiponav.service";
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent implements OnInit {
+
+
+
+
+export class HomepageComponent  implements OnInit {
 
   log:LGM= new  LGM();
   errorMessage = "";
@@ -24,6 +30,8 @@ export class HomepageComponent implements OnInit {
   redirec(){
     this.router.navigate(['Recoverpassword']);
   }
+
+
 
   login(){
     this.errorMessage="";

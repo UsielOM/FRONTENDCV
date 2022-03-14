@@ -1,24 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
-body, html{
-  background-color: #a4eeff;
-  height: 100%;
+
+body,
+html {
+    background-color: #f0f2f5;
+    height: 100%;
 }
-body{
-  margin-bottom: 0;
-  margin-top: 0;
+
+body {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .pie {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: skyblue;
-  padding: 20px;
-  clear: both;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    color: black;
+    clear: both;
 }
 
-.contenedorp{
-  width: 80% ;
-  position: center;
-  margin: 0 auto;
+.contenedorp {
+    width: 80%;
+    position: center;
+    margin: 0 auto;
 }

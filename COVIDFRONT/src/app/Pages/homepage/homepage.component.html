@@ -1,77 +1,88 @@
-<div style="padding: 3rem">
-  <div class="row">
-    <div class="col">
-      <img style="height: auto; width: auto" src="assets/imgejem.png" class="center">
+<div class="logomain">
 
-      <h1>Sintomas Frecuentes del SARS-CoV-2</h1>
-      <pre >
-Dolor corporal y muscular
-Dolor de ojos
-Dolor de Cabeza
-Náuseas o vómitos
-Diarrea
-Secreción o congestión nasales
-Decaimiento
-Ojos ardientes
-Ardor al orinar
-Fiebre
-Escalofríos
-Dolor de garganta
-Sudoración
-Ansiedad
-Insomnio</pre>
-      <p>Si usted tiene al menos 3 de estos sintomas podria estar en riesgo de estar infectado</p>
-    </div>
+    <img src="assets/Logo3.png" width="250px" height="100px">
+</div>
 
-    <div class="col"  >
 
-      <div style="align-content: center; border-color: honeydew; border-style: double">
+<div class="symptom symptomcont">
 
-        <div style="width: 90% ;position: center; padding-top: 20px; margin: 0 auto" >
+    <div class="row">
 
-          <form (ngSubmit)="login()" #loginForm="ngForm">
-            <div class="form-group" >
+        <div class="col">
 
-              <label for="exampleInputEmail1">Correo</label>
-              <input type="text" required [(ngModel)]="log.Email" #email="ngModel" name="email" class="form-control" placeholder="Email" required autofocus>
-              <small id="emailHelp"    class="form-text text-muted">Usuario</small>
-              <div [hidden]="email.valid || email.pristine" class="invalid">
-                Email is required
-              </div>
 
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Contraseña</label>
-              <input type="password" required [(ngModel)]="log.password" #password="ngModel" name="password" class="form-control" placeholder="password" required >
-              <div [hidden]="password.valid || password.pristine" class="invalid">
-                Password is required
-              </div>
-            </div>
-            <br>
 
-            <div class="contenedorlo" style="padding-top: 5px;padding-bottom: 10px">
-              <div>
-                <button  type="submit" [disabled]="!loginForm.form.valid" class="btn btn-primary btn-block">
-                  iniciar sesion
-                </button>
-              </div>
 
-              <div style="align-content: end">
-                <a style="padding-left: 10px;" (click)="redirec()" routerLink="Recuperarcontrasena" routerLinkActive="active">¿Olvidaste tu contraseña?</a>
-              </div>
-            </div>
+            <h1 class="h1">Sintomas Frecuentes del</h1>
+            <h1 class="h1">SARS-CoV-2</h1>
 
-          </form>
-          <span style="color: red;">{{errorMessage}} </span>
 
-          <!--
-          <div style="padding-top:20%;padding-left: 100px">
-            <button type="button" class="btn btn-primary btn-info" [routerLink]="['register']"> Registrate</button>
-          </div>
-          -->
+            <pre class="pretxt"> Dolor corporal y muscular                               Fiebre
+ Dolor de ojos                                                    Escalofríos
+ Dolor de Cabeza Náuseas o vómitos             Dolor de garganta
+ Dolor de ojos                                                    Sudoración
+ Diarrea Secreción o congestión nasales       Ansiedad
+ Ardor al orinar                                                  Insomnio
+
+</pre>
+
+            <!-- <p>Si usted tiene al menos 3 de estos sintomas podria estar en riesgo de estar infectado</p>
+ -->
+
         </div>
-      </div>
+
 
     </div>
-  </div>
+
+</div>
+
+
+<div class="col logind">
+
+    <div>
+
+        <div style="width: 90% ;position: center; padding-top: 20px; margin: 0 auto">
+
+            <form (ngSubmit)="login()" #loginForm="ngForm">
+                <div class="form-group">
+
+                    <label for="exampleInputEmail1">Correo</label>
+                    <input type="text" required [(ngModel)]="log.Email" #email="ngModel" name="email" class="form-control" placeholder="Email" required autofocus>
+                    <small id="emailHelp" class="form-text text-muted">Usuario</small>
+                    <div [hidden]="email.valid || email.pristine" class="invalid">
+                        Email is required
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input type="password" required [(ngModel)]="log.password" #password="ngModel" name="password" class="form-control" placeholder="password" required>
+                    <div [hidden]="password.valid || password.pristine" class="invalid">
+                        Password is required
+                    </div>
+                </div>
+                <br>
+
+                <div class="contenedorlo" style="padding-top: 5px;padding-bottom: 10px">
+                    <div>
+                        <button type="submit" [disabled]="!loginForm.form.valid" class="loginbt btn btn-primary btn-block">
+    iniciar sesion
+  </button>
+                        <button type="submit" [disabled]="!loginForm.form.valid" class="password btn btn-primary btn-block">
+    Registrate
+  </button>
+                    </div>
+
+                    <div style="align-content: end">
+                        <a class="reememberpass" (click)="redirec()" routerLink="Recuperarcontrasena" routerLinkActive="active">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+
+            </form>
+            <span style="color: red;">{{errorMessage}} </span>
+
+
+        </div>
+    </div>
+
 </div>
